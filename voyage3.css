@@ -1,0 +1,361 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+.bodyny {
+  margin: 0;
+  padding: 0;
+}
+/* ************************header*********************** */
+
+.h1head {
+  font-family: "Roboto", sans-serif;
+  font-size: 45px;
+  color: #444;
+  cursor: pointer;
+}
+.h1head:hover {
+  transform: scale(1.05);
+  transition: 0.6s;
+  opacity: 0.5;
+}
+.wrapper {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.orange {
+  color: #ff7a00;
+}
+
+nav ul {
+  font-family: Arial, Helvetica, sans-serif;
+  list-style-type: none;
+}
+nav ul li {
+  float: left;
+  width: 25%;
+  text-align: center;
+  position: relative;
+}
+nav ul::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+nav a {
+  display: block;
+  text-decoration: none;
+  color: #444;
+  border-bottom: 2px solid transparent;
+  padding: 10px 0px;
+}
+nav a:hover {
+  color: #02b8dd;
+  border-bottom: 2px solid gold;
+}
+.sous {
+  display: none;
+  box-shadow: 0px 1px 2px #ccc;
+  background-color: #fff;
+  position: absolute;
+  width: 100px;
+  z-index: 1000;
+}
+nav > ul li:hover .sous {
+  display: block;
+}
+.sous li {
+  float: none;
+  width: 100%;
+  text-align: left;
+}
+.sous a {
+  padding: 10px;
+  border-bottom: none;
+}
+.sous a:hover {
+  border-bottom: none;
+  background-color: rgba(200, 200, 200, 0.1);
+}
+.deroulant > a::after {
+  content: " ▼";
+  font-size: 12px;
+  position: center;
+}
+.conteneur {
+  margin: 50px 20px;
+  height: 1500px;
+}
+
+.clear {
+  clear: both;
+}
+
+header {
+  height: 150px;
+}
+
+header h1 {
+  float: left;
+  margin-top: 32px;
+}
+header nav {
+  float: right;
+  margin-top: 50px;
+}
+header nav ul li {
+  display: inline-block;
+}
+header nav ul li a {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-right: 20px;
+}
+/* Fin du Header*/
+
+video {
+  object-fit: cover;
+}
+/* ******************présentation******************** */
+#logo {
+  height: 120px;
+}
+
+#logo2 {
+  height: 100px;
+}
+
+.nylogo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  align-items: center;
+}
+
+#ny {
+  font-family: "Bebas Neue", cursive;
+  font-style: italic;
+  font-size: 45px;
+}
+
+#nyp {
+  font-family: "Bebas Neue", cursive;
+  text-align: center;
+  text-rendering: optimizeLegibility;
+  font-weight: bold;
+  color: rgba(211, 164, 12, 0.932);
+  font-size: 25px;
+  letter-spacing: 1px;
+  position: relative;
+}
+/************************ trait animé ******************/
+#nyp::before {
+  content: "";
+  position: absolute;
+  background: rgb(179, 187, 189);
+  height: 1.5px;
+  width: 80%;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  animation: h2anim 10s ease-in-out forwards;
+  transform-origin: center;
+}
+@keyframes h2anim {
+  100% {
+    transform: translateX(-50%) scaleX(1);
+  }
+}
+
+/*******************Monuments*************************/
+
+#h2ny {
+  font-size: 35px;
+  text-align: center;
+  font-family: "Bebas Neue", cursive;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  position: relative;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+.box img {
+  width: 100%;
+
+  cursor: pointer;
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+}
+
+.divimg {
+  overflow: hidden;
+}
+
+.divimg img:hover {
+  transform: scale(1.2);
+  transition: 1.5s;
+  opacity: 1;
+
+  /****************** transition flash *********************/
+
+  -webkit-animation: flash 1.5s;
+  animation: flash 1.2s;
+}
+
+.divimg img {
+  transition: 1.3s;
+}
+
+@-webkit-keyframes flash {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes flash {
+  0% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.h3ny {
+  text-align: center;
+  font-style: italic;
+  font-family: "Bebas Neue";
+  text-rendering: optimizeLegibility;
+  font-size: 30px;
+  margin-top: 3px;
+}
+
+.paratitre {
+  text-transform: bold;
+  font-family: "arial", cursive;
+  color: gray;
+  width: 100%;
+  text-align: justify;
+  font-size: 15px;
+  letter-spacing: 1px;
+  margin-top: -45px;
+}
+
+/* *****************2éme trait animé*************** */
+.container ::after {
+  content: "";
+  position: absolute;
+  background: rgb(179, 187, 189);
+  height: 1.5px;
+  width: 80%;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  animation: h3anim 10s ease-in-out forwards;
+  transform-origin: center;
+}
+@keyframes h3anim {
+  100% {
+    transform: translateX(-50%) scaleX(1);
+  }
+}
+
+/* *************formulaire de contact***************** */
+
+#contact-1 {
+  padding: 60px 0;
+  text-align: center;
+}
+
+#h3form {
+  font-family: "Roboto", sans-serif;
+  font-size: 45px;
+  color: #444;
+}
+
+#pform {
+  line-height: 20px;
+  color: #777;
+}
+#contact-1 h3 {
+  width: 400px;
+  text-transform: uppercase;
+  margin: 0 auto 20px auto;
+  border-bottom: 1px solid #02b8dd;
+  padding: 20px;
+}
+form {
+  margin: 60px 0 20px 0;
+}
+label {
+  font-weight: bold;
+  font-size: 20px;
+  margin-right: 10px;
+  color: #777;
+}
+input[type="text"] {
+  padding: 10px;
+  font-size: 20px;
+  margin-right: 20px;
+  border: 2px solid #ddd;
+  border-radius: 3px;
+}
+.button-3 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 11px;
+  background-color: #02b8dd;
+  border-style: none;
+  border-radius: 3px;
+}
+.button-3:hover {
+  color: #fff;
+  background-color: #444;
+}
+/* ********************footer******************** */
+
+#icons a {
+  margin: 0 15px;
+  font-size: 1.3em;
+  margin-top: 10%;
+}
+
+#icons {
+  text-align: center;
+}
+
+#icons :hover {
+  transform: scale(1.3);
+  transition: 0.5s;
+}
+
+footer {
+  height: 260px;
+  background-color: #444;
+  display: grid;
+  grid-template-columns: repeat(3);
+}
+.h1foot {
+  color: #fff;
+  font-size: 45px;
+  text-align: center;
+}
+.copyright {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 40px auto;
+  color: #777;
+}

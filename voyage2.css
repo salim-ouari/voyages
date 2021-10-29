@@ -1,0 +1,435 @@
+body {
+  background-color: rgb(202, 199, 199);
+}
+
+/*Header*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  text-align: center;
+}
+
+.h1head {
+  font-family: "Roboto", sans-serif;
+  font-size: 45px;
+  color: #444;
+}
+
+.h1head:hover {
+  transform: scale(1.05);
+  transition: 0.6s;
+  opacity: 0.5;
+}
+
+p {
+  line-height: 20px;
+  color: #777;
+}
+nav ul {
+  list-style-type: none;
+}
+nav ul li {
+  float: left;
+  width: 25%;
+  text-align: center;
+  position: relative;
+}
+nav ul::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+nav a {
+  display: block;
+  text-decoration: none;
+  color: #444;
+  border-bottom: 2px solid transparent;
+  padding: 10px 0px;
+}
+nav a:hover {
+  color: #02b8dd;
+  border-bottom: 2px solid gold;
+}
+.sous {
+  display: none;
+  box-shadow: 0px 1px 2px #ccc;
+  background-color: #fff;
+  position: absolute;
+  width: 100px;
+  z-index: 1000;
+}
+nav > ul li:hover .sous {
+  display: block;
+}
+.sous li {
+  float: none;
+  width: 100%;
+  text-align: left;
+}
+.sous a {
+  padding: 10px;
+  border-bottom: none;
+}
+.sous a:hover {
+  border-bottom: none;
+  background-color: rgba(200, 200, 200, 0.1);
+}
+.deroulant > a::after {
+  content: " ▼";
+  font-size: 12px;
+  position: center;
+}
+.conteneur {
+  margin: 50px 20px;
+  height: 1500px;
+}
+
+.wrapper {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.orange {
+  color: #ff7a00;
+}
+.clear {
+  clear: both;
+}
+small {
+  font-size: 13px;
+  font-style: italic;
+}
+
+header {
+  height: 150px;
+}
+
+header h1 {
+  float: left;
+  margin-top: 32px;
+}
+header nav {
+  float: right;
+  margin-top: 50px;
+}
+header nav ul li {
+  display: inline-block;
+}
+header nav ul li a {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+/* Fin du Header*/
+
+.h1titremain {
+  font-size: 400%;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-family: Tahoma;
+  margin-top: 3%;
+  margin-left: -3%;
+  margin-right: -3%;
+  text-decoration: wavy;
+  background: linear-gradient(to right, #36ecde, #000);
+  margin-bottom: 3%;
+}
+
+.h2littletitre {
+  font-size: 50px;
+  color: rgb(9, 33, 39);
+  text-shadow: 2px 2px 6px black;
+  text-align: center;
+  margin-bottom: 3%;
+}
+
+/* DEBUT DIAPOOOOOOOOOO */
+
+#slider {
+  width: 80%;
+  max-width: 1000px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+@keyframes slidy {
+  0% {
+    left: 0%;
+  }
+  20% {
+    left: 0%;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  95% {
+    left: -300%;
+  }
+  100% {
+    left: -400%;
+  }
+}
+
+#slider figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  left: 0;
+  text-align: left;
+  animation: 10s slidy infinite;
+}
+
+#slider figure img {
+  height: 500px;
+  width: 1000px;
+  margin-bottom: 1%;
+}
+
+/* FIN DIAPOOOOOOOOOO */
+
+/* Les titres bleu/vert */
+
+.titrehistoire a {
+  margin: auto;
+  color: rgb(23, 119, 122);
+  text-shadow: 1px 1px 3px black;
+  font-size: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.titrehistoire {
+  margin-top: 3%;
+}
+
+.titretourisme a {
+  color: rgb(23, 119, 122);
+  text-shadow: 1px 1px 3px black;
+  font-size: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.titretourisme {
+  margin-top: 5%;
+}
+
+.titretourisme h2:hover {
+  transform: scale(1, 2);
+  transition: 1, 9s;
+}
+
+.titreculture a {
+  color: rgb(23, 119, 122);
+  text-shadow: 1px 1px 3px black;
+  font-size: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.titreculture {
+  margin-top: 5%;
+}
+
+.H {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Les photos des titres */
+
+.history img {
+  width: 40%;
+  height: auto;
+  border-radius: 20%;
+}
+
+.history {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 3%;
+}
+
+.titrehistoire:hover {
+  transform: scale(1.2, 1.2);
+  transition: 1.3s;
+}
+
+.titrehistoire {
+  transition: 1.3s;
+}
+
+.tourismy img {
+  width: 40%;
+  height: auto;
+  border-radius: 20%;
+}
+
+.tourismy {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 3%;
+}
+
+.titretourisme:hover {
+  transform: scale(1.2, 1.2);
+  transition: 1.3s;
+}
+
+.titretourisme {
+  transition: 1.3s;
+}
+
+.cultury img {
+  width: 40%;
+  height: auto;
+  border-radius: 20%;
+}
+
+.cultury {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 3%;
+  margin-bottom: 5%;
+}
+
+.titreculture:hover {
+  transform: scale(1.2, 1.2);
+  transition: 1.3s;
+}
+
+.titreculture {
+  transition: 1.3s;
+}
+
+/* Flash par themes de 3 */
+
+.history:hover img {
+  opacity: 1;
+  -webkit-animation: flash 1.5s;
+  animation: flash 1.5s;
+}
+@-webkit-keyframes flash {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.tourismy:hover img {
+  opacity: 1;
+  -webkit-animation: flash 1.5s;
+  animation: flash 1.5s;
+}
+@-webkit-keyframes flash {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.cultury:hover img {
+  opacity: 1;
+  -webkit-animation: flash 1.5s;
+  animation: flash 1.5s;
+}
+@-webkit-keyframes flash {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*FOOTER*/
+
+#icons a {
+  margin: 0 15px;
+  font-size: 1.3em;
+  margin-top: 10%;
+}
+
+#icons :hover {
+  transform: scale(1.3);
+  transition: 0.5s;
+}
+
+footer {
+  height: 260px;
+  background-color: #444;
+  display: grid;
+  grid-template-columns: repeat(3);
+}
+
+footer h1 {
+  color: #fff;
+  text-align: center;
+}
+.copyright {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 40px auto;
+  color: #777;
+}
